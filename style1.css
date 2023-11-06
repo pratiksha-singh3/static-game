@@ -28,7 +28,7 @@ body{
     backdrop-filter: blur(12px);
     animation: anihead 3.5s linear infinite;
     height: 54px;
-    width: 100vw;
+    /* width: 100vw; */
    
 }
 @keyframes anihead{
@@ -43,12 +43,17 @@ body{
     }
 } 
 #logo {
-    color: #00ad9a;
-    text-shadow: 0 0 25px #00ad9a;
-    display: inline-block;
+    
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
     position: absolute;
-    font-size: 2.5rem;
-    top: -5px;
+    /* font-size: 2.5rem; */
+    /* top: -5px; */
+    /* bottom: -5px; */
+    margin: 2px;
+    align-items: center;
+    gap: 10px;
     font-family: 'Bevan', cursive;
     
     
@@ -102,5 +107,35 @@ footer{
     background-color: rgb(210 183 129 / 65%);
     text-align: center;
     bottom: 0;
+}
+
+
+.lname
+{
+    font-size: 30px;
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #2cb926 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 

@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0px;
@@ -15,7 +14,7 @@
     background: #4A98F7;
   }
   
-  /* Create a flexible layout for the main container */
+  /*  */
   .container {
     display: flex;
     justify-content: space-between;
