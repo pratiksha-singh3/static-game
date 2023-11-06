@@ -1,0 +1,106 @@
+/* code for navbar */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: beige;
+}
+
+
+
+
+
+
+#header {
+    /* position: absolute; */
+    top: 0px;
+    left: 0px;
+    background: rgb(210 183 129 / 65%);
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    animation: anihead 3.5s linear infinite;
+    height: 54px;
+    width: 100vw;
+   
+}
+@keyframes anihead{
+    0%{
+        box-shadow: 0px 5px 156px #00d2c6;
+    }
+    50%{
+        box-shadow: 0px 5px 200px #00d2c6;
+    }
+    100%{
+        box-shadow: 0px 5px 156px #00d2c6;
+    }
+} 
+#logo {
+    color: #00ad9a;
+    text-shadow: 0 0 25px #00ad9a;
+    display: inline-block;
+    position: absolute;
+    font-size: 2.5rem;
+    top: -5px;
+    font-family: 'Bevan', cursive;
+    
+    
+    
+} 
+#list{
+    
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    right: 0.001%;
+    width: 515px;
+    height: 100%;
+    font-size: 24px;
+   
+}
+
+
+ul li{
+    list-style: none;
+    margin-inline: 15px;
+    
+}
+
+
+ul li a{
+    text-decoration: none;
+    color:  #282828;
+    text-shadow: 0 0 25px #00ad9a;
+    font-family: 'Righteous', cursive;
+    
+   
+}
+
+
+a:hover{
+    color: #037b6d;
+}
+
+
+#hamburger{
+    display: none;
+}
+
+/* footer code */
+footer{
+    position: absolute;
+    padding: 7px;
+    width: 100%;
+    background-color: rgb(210 183 129 / 65%);
+    text-align: center;
+    bottom: 0;
+}
+

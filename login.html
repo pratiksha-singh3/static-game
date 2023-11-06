@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login and Registration Forms</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style1.css">
+  </head>
+  <body>
+
+    
+    <div id="header">
+        <div id="logo">
+            <!-- DramNPlay -->
+            <img src="image/logo.png" alt="" style="height: 70px;width: 170px;">
+        </div>
+        <ul id="list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="leaderboard.html">LeaderBoard</a></li>
+            <li><a href="contact.html">ContactUs</a></li>
+            <li><a href="login.html">Login</a></li>  
+        </ul>
+        <div id="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>
+
+    <div class="form-selector">
+      <button id="register-btn" onclick="document.getElementById('register-form').style.display = 'block';  document.getElementById('login-form').style.display = 'none';">Register</button>
+      <button id="login-btn" onclick="document.getElementById('login-form').style.display = 'block';  document.getElementById('register-form').style.display = 'none';">Login</button>
+    </div>
+
+    <div id="register-form" class="form-container">
+        <form>
+          <h2>Registration Form</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email1" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password1" name="password" required>
+
+        <input type="submit" value="Submit" onclick="submitForm()">
+      </form>
+    </div>
+
+    <div id="login-form" class="form-container">
+        <form>
+        <h2>Login Form</h2>
+        <label for="email">Email</label>
+        <input type="email" id="email2" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password2" name="password" required>
+
+        <input type="submit" value="Submit" onclick="submitForm()">
+      </form>
+    </div>
+
+    <footer class="footer">
+        © 2023 Copyright: DrawNPlay.com
+    </footer>
+  <script src="srcipt.js"></script>
+  <script src="login.js"></script>
+  </body>
+</html>

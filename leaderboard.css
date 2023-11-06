@@ -1,0 +1,72 @@
+/* Styles for Leadership Page Part 1 */
+#heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #f7f7f7; */
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  #leadership-title {
+    flex: 1;
+    text-align: left;
+  }
+  
+  #leadership-title h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  #search-bar {
+    flex: 1;
+    text-align: right;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles for Leadership Page Part 2 */
+  #table {
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  #leaderboard {
+    text-align: center;
+  }
+  
+  #leaderboard h3 {
+    font-size: 24px;
+    margin: 0 0 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #eae3e3;
+  }
+  
