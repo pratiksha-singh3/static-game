@@ -33,13 +33,13 @@
         <section id="gameplay">
           <div class="gameplay-column">
             <img src="image/1vs1.png" alt="1v1 Gameplay">
-            <button class="action-button">Challenge a Friend</button>
+            <button class="action-button" id="1v1">Challenge a Friend</button>
             <p>Instructions for 1v1 gameplay...</p>
             <a href="#">Learn More</a>
           </div>
           <div class="gameplay-column">
             <img src="image/multiplayer.jpeg" alt="Multiplayer Gameplay">
-            <button class="action-button">Join the Party</button>
+            <button class="action-button" id="multiplayer">Join the Party</button>
             <p>Instructions for multiplayer gameplay...</p>
             <a href="#">Learn More</a>
           </div>
@@ -67,5 +67,16 @@
     </footer>
   <script src="srcipt.js"></script>
   <script src="login.js"></script>
+  <script>
+    const challengeBtn1 = document.getElementById("1v1");
+    const challengeBtn2 = document.getElementById("multiplayer");
+    challengeBtn1.addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+    challengeBtn2.addEventListener("click", function () {
+      window.location.href = "index.html";
+    });
+  </script>
+  
   </body>
 </html>
