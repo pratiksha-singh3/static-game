@@ -10,7 +10,8 @@
 }
 
 body{
-    height: 100vh;
+    top: 0px;
+    /* height: 100vh; */
     background-color: beige;
 }
 
@@ -23,7 +24,7 @@ body{
     /* position: absolute; */
     top: 0px;
     left: 0px;
-    background: rgb(210 183 129 / 65%);
+    /* background: rgb(210 183 129 / 65%); */
     overflow: hidden;
     backdrop-filter: blur(12px);
     animation: anihead 3.5s linear infinite;
@@ -82,7 +83,7 @@ ul li{
 
 ul li a{
     text-decoration: none;
-    color:  #282828;
+    color:  #f5efef;
     text-shadow: 0 0 25px #00ad9a;
     font-family: 'Righteous', cursive;
     
@@ -104,8 +105,9 @@ footer{
     position: absolute;
     padding: 7px;
     width: 100%;
-    background-color: rgb(210 183 129 / 65%);
+    background-color: rgb(20 15 38);
     text-align: center;
+    color: white;
     bottom: 0;
 }
 

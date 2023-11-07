@@ -35,9 +35,11 @@ form {
 }  
 
 #register-form{
+  color: #fff;
   display: block;
 }
 #login-form{
+  color: #fff;
   display: none;
 }
 .form-selector{
@@ -48,6 +50,7 @@ form {
   margin-right: 25px;
 }
 #register-btn{
+  color: #fff;
   border-radius: 10px;
   background-color: #e51515;
   margin-right: 25px;
@@ -56,6 +59,7 @@ form {
   cursor: pointer;
 }
 #login-btn{
+  color: #fff;
   border-radius: 10px;
   background-color: #e51515;
   margin-right: 25px;
