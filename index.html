@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>home</title>
+    <link rel="icon" type="image/x-icon" href="image/logo11.png">
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="home.css">
@@ -38,15 +39,29 @@
             <img src="image/1vs1.png" alt="1v1 Gameplay">
             <button class="action-button" id="1v1">Challenge a Friend</button>
             <p>Instructions for 1v1 gameplay...</p>
-            <a href="#" class="learn">Learn More</a>
+            <button class="learn-button" id="learn1v1">Learn More</button>
           </div>
           <div class="gameplay-column">
             <img src="image/multiplayer.jpeg" alt="Multiplayer Gameplay">
             <button class="action-button" id="multiplayer">Join the Party</button>
             <p>Instructions for multiplayer gameplay...</p>
-            <a href="#" class="learn">Learn More</a>
+            
+            <button class="learn-button" id="learnMultiplayer">Learn More</button>
           </div>
         </section>
+        <div class="modal" id="instructionsModal">
+          <div class="modal-content">
+            <button class="close" id="closeModal">close</button>
+              <div id="modal-content">
+                  <h2>Game Instructions</h2>
+                  <ul id="instructionsList">
+                      <!-- Dynamic instructions will be added here using JavaScript -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+        
         <section id="instructions">
             <h2>How to Play</h2>
             <p>Follow these instructions to enjoy the game.</p>
@@ -168,7 +183,7 @@
         © 2023 Copyright: <a href="index.html">DrawNPlay.com</a>
     </footer>
   <script src="srcipt.js"></script>
-  <script src="login.js"></script>
+  <script src="home.js"></script>
   <script>
     const challengeBtn1 = document.getElementById("1v1");
     const challengeBtn2 = document.getElementById("multiplayer");

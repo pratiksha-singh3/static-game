@@ -126,17 +126,17 @@ main {
     border-radius: 10px;
   }
   
-  .action-button {
+  .action-button,.learn-button {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px;
   }
   
-  .action-button:hover {
+  .action-button:hover,.learn-button:hover {
     background-color: #0056b3;
   }
   
@@ -227,3 +227,43 @@ main {
 li{
   text-decoration: none;
 }
+
+/* Add your CSS styles for modal and button here */
+.modal {
+  display: none;
+  padding: 20px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* overflow: auto; */
+}
+
+.modal-content {
+  color: white;
+  background-color: #514646;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close {
+  color: white;
+  background-color: #f44336;
+  border-radius: 10px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #78f436;
+}
+
