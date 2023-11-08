@@ -28,6 +28,9 @@ body {
   color: transparent;
   -webkit-text-stroke: 2px #03a9f4;
 }
+a :hover{
+  color: green;
+}
 
 .content h2:nth-child(2) {
   color: #03a9f4;
@@ -106,7 +109,8 @@ main {
   .gameplay-column {
     border: solid black;
     border-radius: 5px;
-    background-color: #a5888b;;
+    color: white;
+    background-color: #6e4f524d;
     display: flex;
     flex-direction: column;
     /* flex: 1; */
@@ -145,7 +149,8 @@ main {
 #instructions {
     border: solid black;
     border-radius: 5px;
-    background-color: #a5888b;;
+    color: white;
+    background-color: #6e4f524d;;
     padding: 40px;
     text-align: center;
   }
@@ -160,7 +165,7 @@ main {
     margin-bottom: 20px;
   }
   
-  #instructions ol {
+  #instructions ul {
     text-align: left;
     max-width: 400px;
     margin: 0 auto;
@@ -173,9 +178,10 @@ main {
   
   /* Styles for About Us Section */
   #about-us {
+    color: white;
     border: solid black;
     border-radius: 5px;
-    background-color: #a5888b;;
+    background-color: #6e4f524d;;
     padding: 40px;
     text-align: center;
   }
@@ -212,4 +218,12 @@ main {
 }
 .links a{
   margin: 10px;
+}
+
+.learn{
+  color: #007BFF;
+}
+
+li{
+  text-decoration: none;
 }

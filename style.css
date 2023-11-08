@@ -292,3 +292,87 @@
     flex-direction: row;
     gap: 10px;
 }
+
+/* CSS for mobile devices and small screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  li{
+    visibility: hidden;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  .drawing-board {
+    max-height: none;
+  }
+
+  .tools-board {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .left {
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+
+  .chat-box {
+    width: 100%;
+    height: 375px;
+    padding: 10px;
+  }
+
+  .chat-messages {
+    max-height: 200px;
+  }
+
+  .toggle-button {
+    float: none;
+    margin-top: 20px;
+  }
+}
+
+/* CSS for larger screens (desktops and tablets) */
+@media (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .drawing-board {
+    max-height: 600px;
+  }
+
+  .tools-board {
+    width: 210px;
+    padding: 15px 22px 0;
+  }
+
+  .left {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .chat-box {
+    max-width: 500px; /* Adjust the width as needed */
+  }
+
+  .chat-messages {
+    max-height: 300px; /* Adjust the height as needed */
+  }
+
+  .toggle-button {
+    float: right;
+    margin-top: 0;
+  }
+}
