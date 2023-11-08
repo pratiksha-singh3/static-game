@@ -6,7 +6,7 @@ const canvas = document.querySelector("canvas");
     const colorPicker = document.querySelector("#color-picker");
     const clearCanvas = document.querySelector(".clear-canvas");
     const saveImg = document.querySelector(".save-img");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d",{ willReadFrequently: true });
 
     let prevMouseX, prevMouseY, snapshot;
     let isDrawing = false;
@@ -117,44 +117,45 @@ const canvas = document.querySelector("canvas");
 
     const isTouchDevice = 'ontouchstart' in document.documentElement;
 
-    if (isTouchDevice) {
+  
       canvas.addEventListener("touchstart", handleTouchStart);
       canvas.addEventListener("touchmove", handleTouchMove);
       canvas.addEventListener("touchend", handleTouchEnd);
-    } else {
+    
       canvas.addEventListener("mousedown", startDraw);
       canvas.addEventListener("mousemove", drawing);
       canvas.addEventListener("mouseup", () => isDrawing = false);
-    }
+    
 
-    function handleTouchStart(e) {
-      const touch = e.touches[0];
-      startDraw(touch);
-      e.preventDefault();
-    }
-
-    function handleTouchMove(e) {
-      const touch = e.touches[0];
-      drawing(touch);
-      e.preventDefault();
-    }
-
-    function handleTouchEnd(e) {
-      isDrawing = false;
-      e.preventDefault();
-    }
-
-    document.body.addEventListener("touchstart", (e) => {
-      if (e.target == canvas) {
+      function handleTouchStart(e) {
+        const touch = e.touches[0];
+        startDraw(touch);
         e.preventDefault();
       }
-    });
-
-    document.body.addEventListener("touchend", (e) => {
-      if (e.target == canvas) {
+      
+      function handleTouchMove(e) {
+        const touch = e.touches[0];
+        drawing(touch);
         e.preventDefault();
       }
-    });
+      
+      function handleTouchEnd(e) {
+        isDrawing = false;
+        e.preventDefault();
+      }
+      
+      document.body.addEventListener("touchstart", (e) => {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, {passive: false});
+      
+      document.body.addEventListener("touchend", (e) => {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, {passive: false});
+      
 
 
 
