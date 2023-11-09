@@ -14,11 +14,9 @@ let currentTool = "brush";
 let brushSize = 5;
 let selectedColor = "#000";
 
-// canvas.width = canvas.offsetWidth;
-// canvas.height = canvas.offsetHeight;
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 function setBackground() {
     context.fillStyle = "#fff";
@@ -33,9 +31,11 @@ window.addEventListener("load", () => {
 });
 
 function drawRectangle(e) {
-    if (!fillColorCheckbox.checked) {
+  console.log(fillColorCheckbox.checked);
+    if (fillColorCheckbox.checked==false) {
         context.strokeRect(e.offsetX, e.offsetY, prevX - e.offsetX, prevY - e.offsetY);
     }
+    else
     context.fillRect(e.offsetX, e.offsetY, prevX - e.offsetX, prevY - e.offsetY);
 }
 
@@ -56,9 +56,19 @@ function drawTriangle(e) {
 }
 
 function startDrawing(e) {
-    isDrawing = true;
-    prevX = e.offsetX;
-    prevY = e.offsetY;
+  isDrawing = true;
+  if (e.touches ) {
+    // Handle touch events
+    x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+    y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
+  } else {
+    // Handle mouse events
+    x = e.clientX - canvas.getBoundingClientRect().left;
+    y = e.clientY - canvas.getBoundingClientRect().top;
+  }
+  prevX = x;
+  prevY = y;
+  // console.log({prevX,prevY});
     context.beginPath();
     context.lineWidth = brushSize;
     context.strokeStyle = selectedColor;
@@ -67,21 +77,34 @@ function startDrawing(e) {
 }
 
 function drawing(e) {
-    if (!isDrawing) return;
-    context.putImageData(lastSnapshot, 0, 0);
+  if (!isDrawing) return;
+  context.putImageData(lastSnapshot, 0, 0);
 
-    if (currentTool === "brush" || currentTool === "eraser") {
-        context.strokeStyle = currentTool === "eraser" ? "#fff" : selectedColor;
-        context.lineTo(e.offsetX, e.offsetY);
-        context.stroke();
-    } else if (currentTool === "rectangle") {
-        drawRectangle(e);
-    } else if (currentTool === "circle") {
-        drawCircle(e);
-    } else {
-        drawTriangle(e);
-    }
+  let x, y;
+
+  if (e.touches ) {
+    // Handle touch events
+    x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+    y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
+  } else {
+    // Handle mouse events
+    x = e.clientX - canvas.getBoundingClientRect().left;
+    y = e.clientY - canvas.getBoundingClientRect().top;
+  }
+  
+  if (currentTool === "brush" || currentTool === "eraser") {
+    context.strokeStyle = currentTool === "eraser" ? "#fff" : selectedColor;
+    context.lineTo(x, y);
+    context.stroke();
+  } else if (currentTool === "rectangle") {
+    drawRectangle({ offsetX: x, offsetY: y });
+  } else if (currentTool === "circle") {
+    drawCircle({ offsetX: x, offsetY: y });
+  } else {
+    drawTriangle({ offsetX: x, offsetY: y });
+  }
 }
+
 
 tools.forEach(tool => {
     tool.addEventListener("click", () => {
@@ -119,13 +142,15 @@ saveImageButton.addEventListener("click", () => {
 });
 
 function setCanvasSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  setBackground();
 }
 
 setCanvasSize();
 
-// window.addEventListener("resize", setCanvasSize);
+window.addEventListener("resize", setCanvasSize);
+
 
 const isTouchDevice = 'ontouchstart' in document.documentElement;
 
@@ -137,7 +162,9 @@ canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 
+
 function handleTouchStart(e) {
+    // console.log('Touch Start');
     if (e.touches.length > 0) {
         const touch = e.touches[0];
         startDrawing(touch);
@@ -145,6 +172,7 @@ function handleTouchStart(e) {
 }
 
 function handleTouchMove(e) {
+    // console.log('Touch Move');
     if (e.touches.length > 0) {
         const touch = e.touches[0];
         drawing(touch);
@@ -152,21 +180,23 @@ function handleTouchMove(e) {
 }
 
 function handleTouchEnd() {
+    // console.log('Touch End');
     isDrawing = false;
 }
 
 document.body.addEventListener('touchstart', (e) => {
-    if (e.target == canvas) {
-        e.preventDefault();
-    }
+    // console.log('Body Touch Start');
+    // if (e.target == canvas) {
+    //     e.preventDefault();
+    // }
 });
 
 document.body.addEventListener('touchend', (e) => {
+    // console.log('Body Touch End');
     if (e.target == canvas) {
         e.preventDefault();
     }
 });
-
 
 
 
