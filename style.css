@@ -13,6 +13,11 @@
     height: 100%;
     background: #4A98F7;
   }
+  canvas {
+    touch-action: none;
+    } 
+
+
   
   /*  */
   .container {
@@ -309,7 +314,7 @@
   }
 
   .drawing-board {
-    max-height: none;
+    /* max-height: none; */
   }
 
   .tools-board {
