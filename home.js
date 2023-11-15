@@ -1,20 +1,28 @@
 // Define instructions for 1v1 and multiplayer
 const instructions1v1 = [
-    "Instruction 1 for 1v1",
-    "Instruction 2 for 1v1",
-    "Instruction 3 for 1v1",
-    "Instruction 4 for 1v1",
-    "Instruction 5 for 1v1",
-    "Instruction 6 for 1v1",
+    "-Create an Account: For an enhanced gaming experience and to access exclusive features, consider creating a PlayNDraw Games account.",
+    "-Participants: Decide who will be part of your Scribble Game. Share the game link to your friends you want to join the game.",
+    "-Game Setup:",
+    "1) Choose the type of DrawNPlay Game you had like:",
+    "2) Pictionary: Draw and guess based on prompts.",
+    "3) Story your art: Collaboratively create a story through drawings and captions.",
+    "4) Guess the drawing: Participants guess the meaning behind each others drawings.",
+    "-Drawing Tools: Familiarize yourself with the drawing tools available. These may include various brushes, colors, and an eraser. Get creative!",
+    "-Interaction: Use the chat or comment features to communicate with other participants. Share thoughts about drawings, make guesses, or simply chat while playing.",
+    "-Enjoy the Experience: Most importantly, have fun! Whether you're playing with friends, family, or colleagues, your personalized Scribble Game is designed for enjoyment and creativity.",
 ];
 
 const instructionsMultiplayer = [
-    "Instruction 1 for multiplayer",
-    "Instruction 2 for multiplayer",
-    "Instruction 3 for multiplayer",
-    "Instruction 4 for multiplayer",
-    "Instruction 5 for multiplayer",
-    "Instruction 6 for multiplayer",
+    "-Create an Account: For an enhanced gaming experience and to access exclusive features, consider creating a PlayNDraw Games account.",
+    "-Participants: Join a random party and showcase your art and guesing skills.",
+    "-Game Setup:",
+    "1) Choose the type of DrawNPlay Game you had like:",
+    "2) Pictionary: Draw and guess based on prompts.",
+    "3) Story your art: Collaboratively create a story through drawings and captions.",
+    "4) Guess the drawing: Participants guess the meaning behind each others drawings.",
+    "-Drawing Tools: Familiarize yourself with the drawing tools available. These may include various brushes, colors, and an eraser. Get creative!",
+    "-Interaction: Use the chat or comment features to communicate with other participants. Share thoughts about drawings, make guesses, or simply chat while playing.",
+    "-Enjoy the Experience: Most importantly, have fun! Whether you're playing with friends, family, or colleagues, your personalized Scribble Game is designed for enjoyment and creativity.",
 ];
 
 // Function to open modal with dynamic content
