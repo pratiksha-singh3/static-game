@@ -16,6 +16,6 @@ Interactive Chat:
 Engage with other participants through a real-time chat feature.
 
 -Contributer's
-Shivam Kumar
-Shipra Chandra
-Pratiksha Singh
+Shivam Kumar ,
+Shipra Chandra ,
+Pratiksha Singh 
